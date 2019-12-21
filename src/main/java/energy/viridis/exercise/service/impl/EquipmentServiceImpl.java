@@ -72,14 +72,16 @@ public class EquipmentServiceImpl implements EquipmentService {
 		
 	}
 	
-	private void validateId(Equipment equipment) {
+	@Override
+	public void validateId(Equipment equipment) {
 		if(equipment.getId() == null) {
 			log.info("Equipment id not informed.");
 			throw new BusinessRuleException("Enter the Equipment id.");
 		}
 	}
 
-	private void validateEquipment(Equipment equipment) {
+	@Override
+	public void validateEquipment(Equipment equipment) {
 		if(equipment.getName() == null || equipment.getName().equals("")) {
 			log.info("Equipment name not informed.");
 			throw new BusinessRuleException("Enter the name of the Equipment.");

@@ -68,14 +68,16 @@ public class MaintenanceOrderServiceImpl implements MaintenanceOrderService {
 		
 	}
 	
-	private void validateId(MaintenanceOrder maintenanceOrder) {
+	@Override
+	public void validateId(MaintenanceOrder maintenanceOrder) {
 		if(maintenanceOrder.getId() == null) {
 			log.info("Maintenance Order id not informed.");
 			throw new BusinessRuleException("Enter the Maintenance Order id.");
 		}
 	}
 
-	private void validateMaintenanceOrder(MaintenanceOrder maintenanceOrder) {
+	@Override
+	public void validateMaintenanceOrder(MaintenanceOrder maintenanceOrder) {
 		
 		if(maintenanceOrder.getEquipment() == null) {
 			log.info("Equipment not informed.");
@@ -88,11 +90,5 @@ public class MaintenanceOrderServiceImpl implements MaintenanceOrderService {
 		}
 		
 	}
-	
-//	private Equipment getEquipment(Long idEquipment) {
-//		return equipmentRepository
-//				.findById(idEquipment)
-//				.orElseThrow( () -> new BusinessRuleException("Equipment not found for the id informed.") );
-//	}
 	
 }

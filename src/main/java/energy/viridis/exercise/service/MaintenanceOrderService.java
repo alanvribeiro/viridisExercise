@@ -15,5 +15,9 @@ public interface MaintenanceOrderService {
 	MaintenanceOrder update(MaintenanceOrder maintenanceOrder);
 	
 	void delete(MaintenanceOrder maintenanceOrder);
+	
+	void validateId(MaintenanceOrder maintenanceOrder);
+
+	void validateMaintenanceOrder(MaintenanceOrder maintenanceOrder);
 
 }

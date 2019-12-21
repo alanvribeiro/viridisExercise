@@ -16,4 +16,8 @@ public interface EquipmentService {
 	
 	void delete(Equipment equipment);
 	
+	void validateId(Equipment equipment);
+	
+	void validateEquipment(Equipment equipment);
+	
 }
